@@ -1,0 +1,30 @@
+$input-focus-box-shadow:0 0 3px 1px rgba(249, 108, 249, .5);
+.nav{
+    background-color: antiquewhite;
+    font-size: 22px;
+    display: flex;
+    div{
+        display: flex;
+    }
+
+    .form-control{
+        padding: 0;
+        display: flex;
+        input{
+            border-radius: 5px;
+            &:focus{
+                outline: none;
+                box-shadow: $input-focus-box-shadow;
+            }
+           
+            border: none;
+            width: 100%;
+        }
+        button{
+            background-color: rgb(240, 240, 240);
+            border-radius: 5px;
+            border-start-start-radius: 0;
+            border-end-start-radius: 0;
+        }
+    }
+}

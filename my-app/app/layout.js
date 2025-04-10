@@ -1,3 +1,6 @@
+import 'react-bootstrap'
+import Header from './_component/header'
+import '@/styles/globals.scss'
 
 
 export default function RootLayout({ children }) {
@@ -7,6 +10,7 @@ export default function RootLayout({ children }) {
       
     </head>
       <body>
+      <Header />
         {children}
       </body>
     </html>
