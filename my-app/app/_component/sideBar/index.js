@@ -103,7 +103,19 @@ const Sidebar = () => {
         width: 256,
       }}
     >
-      <Button
+     
+      <Menu
+        defaultSelectedKeys={['1']}
+        defaultOpenKeys={['sub1']}
+        mode="inline"
+        theme="light"
+        inlineCollapsed={collapsed}
+        items={items}
+        style={{
+          backgroundColor: ' #08979c',
+        }}
+      ></Menu>
+       <Button
         className="btn"
         type="red"
         onClick={toggleCollapsed}
@@ -115,17 +127,6 @@ const Sidebar = () => {
       >
         <MenuOutlined />
       </Button>
-      <Menu
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
-        mode="inline"
-        theme="light"
-        inlineCollapsed={collapsed}
-        items={items}
-        style={{
-          backgroundColor: ' #08979c',
-        }}
-      />
     </div>
   )
 }
