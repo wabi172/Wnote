@@ -30,9 +30,9 @@ export default function Header() {
         </div>
         <div className="p-2 flex-grow-1 justify-content-end align-items-center">
           <div className="me-3 ">
-            <FontAwesomeIcon icon={faCalendar} className='me-3' />
-            <FontAwesomeIcon icon={faBell} className='me-3'/>
-            <FontAwesomeIcon icon={faCircleUser} className='me-3'/>
+            <FontAwesomeIcon icon={faCalendar} className='me-5' />
+            <FontAwesomeIcon icon={faBell} className='me-5'/>
+            <FontAwesomeIcon icon={faCircleUser} className='me-5'/>
           </div>
         </div>
       </nav>

@@ -1,7 +1,6 @@
-
 export default function Home() {
   return (
-   <div className="container-fluid">
+   <div className="">
     這是首頁
    </div>
   );
