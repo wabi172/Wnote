@@ -1,5 +1,6 @@
 'use client'
-import React, { useState ,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import './sideBar.css'
 import {
   AppstoreOutlined,
   ContainerOutlined,
@@ -88,10 +89,6 @@ const Sidebar = () => {
     setCollapsed(!collapsed)
   }
 
-
-
-
-
   function resize() {
     container.style.gridTemplateColumns = 100 + 'px 1fr' // 更新 Grid 佈局
   }
@@ -99,7 +96,9 @@ const Sidebar = () => {
     dcontainer.style.gridTemplateColumns = 272 + 'px 1fr' // 更新 Grid 佈局
   }
   return (
+    
     <div
+    className='side'
       style={{
         width: 256,
       }}
@@ -123,6 +122,9 @@ const Sidebar = () => {
         theme="light"
         inlineCollapsed={collapsed}
         items={items}
+        style={{
+          backgroundColor: ' #08979c',
+        }}
       />
     </div>
   )
