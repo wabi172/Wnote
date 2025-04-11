@@ -55,14 +55,10 @@ export default function RootLayout({ children }) {
           }}
         >
           <Header />
-
-          {/* <div
-            className="side"
-            style={{ gridTemplateColumns: sideWidth }}
-            onClick={rewidth}
-          >
-          </div> */}
-          <Layout>
+          <Layout style={{
+            minHeight: '100vh',
+            flexDirection:'row' //主軸水平 內容由左至右
+          }}>
             {/* <Sider collapsible>
               <Menu
                 theme="dark"
