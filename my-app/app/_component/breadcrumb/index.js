@@ -3,10 +3,10 @@ import React from 'react'
 import { useLocation, Link } from 'react-router-dom'
 
 function Breadcrumb() {
-  const location = useLocation()
+  const location = useLocation() //用useLocation()記得要被Router組件包裹，BrowserRouter用於瀏覽器環境 
   const path = location.pathname.split('/').filter((item) => item != '') //分割路徑 移除空字串
 
-  const breadcrumbData = [{ name: '首頁', url: '/' }]
+  const breadcrumbData = [{ name: 'Home', url: '/' }]
 
   let currentPath = ''
   path.forEach((item, index) => {

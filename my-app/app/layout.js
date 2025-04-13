@@ -87,7 +87,6 @@ export default function RootLayout({ children }) {
           }}>
           <Router>
           <Breadcrumb/>
-            
           </Router>
           {children}
           </Content>
