@@ -1,8 +1,11 @@
 'use client'
 import 'react-bootstrap'
+import Providers from './provider'
 import Header from './_component/header'
 import '@/styles/globals.scss'
 import Sidebar from './_component/sideBar'
+import Breadcrumb from './_component/breadcrumb'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { useState } from 'react'
 import {
   DesktopOutlined,
@@ -46,31 +49,53 @@ export default function RootLayout({ children }) {
       setSideWidth('100px 1fr')
     }
   }
+  const {
+    token: { colorBgContainer, borderRadiusLG },
+  } = theme.useToken();
   return (
     <html lang="en">
       <body>
-        <Layout
+      <Providers>
+      <Layout
           style={{
             minHeight: '100vh',
           }}
         >
           <Header />
-          <Layout style={{
-            minHeight: '100vh',
-            flexDirection:'row' //主軸水平 內容由左至右
-          }}>
-            {/* <Sider collapsible>
+          <Layout
+            style={{
+              minHeight: '100vh',
+              flexDirection: 'row', //主軸水平 內容由左至右
+            }}
+          >
+            <Sider collapsible theme="light">
               <Menu
-                theme="dark"
+                theme="light"
                 defaultSelectedKeys={['1']}
                 mode="inline"
                 items={items}
               />
-            </Sider> */}
-            <Sidebar></Sidebar>
-            <Content>{children}</Content>
+            </Sider>
+
+            <Layout>
+              <Content  style={{
+            margin: '24px 16px',
+            padding: 24,
+            minHeight: 280,
+            background: colorBgContainer,
+            borderRadius: borderRadiusLG,
+          }}>
+          <Router>
+          <Breadcrumb/>
+            
+          </Router>
+          {children}
+          </Content>
+            </Layout>
           </Layout>
         </Layout>
+      </Providers>
+       
       </body>
     </html>
   )

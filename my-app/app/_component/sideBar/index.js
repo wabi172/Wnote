@@ -6,8 +6,6 @@ import {
   ContainerOutlined,
   DesktopOutlined,
   MailOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
   MenuOutlined,
   PieChartOutlined,
 } from '@ant-design/icons'
@@ -96,14 +94,7 @@ const Sidebar = () => {
     dcontainer.style.gridTemplateColumns = 272 + 'px 1fr' // 更新 Grid 佈局
   }
   return (
-    
-    <div
-    className='side'
-      style={{
-        width: 256,
-      }}
-    >
-     
+    <div className="side">
       <Menu
         defaultSelectedKeys={['1']}
         defaultOpenKeys={['sub1']}
@@ -115,7 +106,7 @@ const Sidebar = () => {
           backgroundColor: ' #08979c',
         }}
       ></Menu>
-       <Button
+      <Button
         className="btn"
         type="red"
         onClick={toggleCollapsed}
