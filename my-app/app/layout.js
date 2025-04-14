@@ -52,6 +52,9 @@ export default function RootLayout({ children }) {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+  if(!document){
+    return <></>
+  }
   return (
     <html lang="en">
       <body>

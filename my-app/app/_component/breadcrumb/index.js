@@ -19,6 +19,9 @@ function Breadcrumb() {
 if(!location){
     return <p>loading...</p>
 }
+if(!document){
+  return <></>
+}
 console.log(location);
 
   return (

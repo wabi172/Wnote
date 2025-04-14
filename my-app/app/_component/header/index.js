@@ -1,6 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import './header.scss'
+import Dropmenu from '../dropdown'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faMagnifyingGlass,
@@ -30,9 +32,10 @@ export default function Header() {
         </div>
         <div className="p-2 flex-grow-1 justify-content-end align-items-center">
           <div className="me-3 ">
-            <FontAwesomeIcon icon={faCalendar} className='me-5' />
+            {/* <FontAwesomeIcon icon={faCalendar} className='me-5' />
             <FontAwesomeIcon icon={faBell} className='me-5'/>
-            <FontAwesomeIcon icon={faCircleUser} className='me-5'/>
+            <FontAwesomeIcon icon={faCircleUser} className='me-5'/> */}
+            <Dropmenu icon={faCalendar}></Dropmenu> <Dropmenu icon={faBell}></Dropmenu> <Dropmenu icon={faCircleUser}></Dropmenu>
           </div>
         </div>
       </nav>
