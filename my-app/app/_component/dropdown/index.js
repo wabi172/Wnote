@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const onClick = ({ key }) => {
   message.info(`Click on item ${key}`);
 };
-const items = [
+const defaultItmes = [
   {
     label: '1st menu item',
     key: '1',
@@ -20,7 +20,8 @@ const items = [
     key: '3',
   },
 ];
-const Dropmenu = ({icon}) => (
+// items沒有值就用預設
+const Dropmenu = ({icon, items = defaultItmes}) => (
   <Dropdown
     menu={{
       items,
